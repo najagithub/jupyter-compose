@@ -12,7 +12,7 @@ Install docker and docker-compose on you machine
 
 ```bash
   # create this path for the home directory of jupyter user
-  mkdir /data/jupyter/home/
+  mkdir -p /data/jupyter/home/
   # choose your directory for the project 
   git clone https://github.com/najagithub/jupyter-compose.git
   docker-compose up -d
