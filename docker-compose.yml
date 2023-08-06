@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  jhubcontainer:
+    build: .
+    container_name: jhubcontainer
+    ports:
+      - 8000:8000
+    volumes:
+      - /data/jupyter/home:/home
+      - ./jupyterhub_config.py:/etc/jupyterhub/jupyterhub_config.py
+    networks:
+      - jupyterhub
+
+networks:
+  jupyterhub:
+    driver: bridge
