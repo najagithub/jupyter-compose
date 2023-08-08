@@ -29,7 +29,7 @@ RUN jupyterhub --generate-config
 
 RUN apt install openjdk-11-jdk -y
 
-RUN python3 -m pip install pyspark pandas
+RUN python3 -m pip install pyspark~=3.3.2 pandas
 
 EXPOSE 8000
 
